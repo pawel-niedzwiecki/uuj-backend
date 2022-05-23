@@ -23,4 +23,17 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  menus: {
+    config: {
+      maxDepth: 0,
+    },
+  },
+  "vercel-deploy": {
+    enabled: true,
+    config: {
+      deployHook: env("VERCEL_DEPLOY_HOOK"),
+      apiToken: env("VERCEL_API_TOKEN"),
+      appFilter: env("VERCEL_APP_NAME"),
+    },
+  },
 });
