@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blog_social_medias",
+  "info": {
+    "displayName": "Social media",
+    "icon": "bullhorn"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "YouTube",
+        "Facebook",
+        "Instagram"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

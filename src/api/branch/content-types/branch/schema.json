@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "branchs",
+  "info": {
+    "displayName": "Branch",
+    "singularName": "branch",
+    "pluralName": "branchs",
+    "tableName": "branchs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "street": {
+      "type": "string"
+    },
+    "street_number": {
+      "type": "string",
+      "required": true
+    },
+    "post_code": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "nip": {
+      "type": "string"
+    },
+    "regon": {
+      "type": "string"
+    },
+    "main_adress": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "branch"
+    },
+    "number_phone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::number-phone.number-phone",
+      "inversedBy": "branches"
+    },
+    "e_mail": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::e-mail.e-mail",
+      "inversedBy": "branches"
+    }
+  }
+}

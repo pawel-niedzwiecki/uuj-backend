@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blog_advantages",
+  "info": {
+    "displayName": "Advantages",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "clook"
+      ],
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 140
+    }
+  }
+}

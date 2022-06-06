@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "quote": {
+      "type": "richtext",
+      "required": true
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Advantages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.advantages",
+      "required": true
+    },
+    "branch": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::branch.branch",
+      "inversedBy": "services"
+    },
+    "about_headquarter": {
+      "type": "richtext",
+      "required": true
+    },
+    "rating": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rating.rating",
+      "inversedBy": "service"
+    },
+    "why_we": {
+      "type": "richtext",
+      "required": true
+    },
+    "what_we_can_for_you_made": {
+      "type": "richtext",
+      "required": true
+    },
+    "history": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.history-line",
+      "required": true
+    },
+    "faq": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::faq.faq",
+      "inversedBy": "service"
+    }
+  }
+}

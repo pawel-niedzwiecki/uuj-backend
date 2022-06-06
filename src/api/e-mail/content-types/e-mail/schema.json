@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "e_mails",
+  "info": {
+    "singularName": "e-mail",
+    "pluralName": "e-mails",
+    "displayName": "e-mail"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "branches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::branch.branch",
+      "mappedBy": "e_mail"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number_phones": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::number-phone.number-phone"
+    },
+    "e_mail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::e-mail.e-mail"
+    },
+    "social_media": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blog.social-media",
+      "required": true
+    }
+  }
+}
