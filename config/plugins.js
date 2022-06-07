@@ -28,12 +28,59 @@ module.exports = ({ env }) => ({
       maxDepth: 0,
     },
   },
-  "vercel-deploy": {
+  "fuzzy-search": {
     enabled: true,
     config: {
-      deployHook: env("VERCEL_DEPLOY_HOOK"),
-      apiToken: env("VERCEL_API_TOKEN"),
-      appFilter: env("VERCEL_APP_NAME"),
+      contentTypes: [
+        {
+          uid: "api::new.new",
+          modelName: "news",
+          queryConstraints: {
+            where: {
+              $and: [
+                {
+                  publishedAt: { $notNull: true },
+                },
+              ],
+            },
+          },
+          fuzzysortOptions: {
+            characterLimit: 500,
+            threshold: -600,
+            limit: 5,
+            keys: [
+              {
+                name: "title",
+                weight: 100,
+              },
+            ],
+          },
+        },
+        {
+          uid: "api::service.service",
+          modelName: "services",
+          queryConstraints: {
+            where: {
+              $and: [
+                {
+                  publishedAt: { $notNull: true },
+                },
+              ],
+            },
+          },
+          fuzzysortOptions: {
+            characterLimit: 500,
+            threshold: -600,
+            limit: 5,
+            keys: [
+              {
+                name: "title",
+                weight: 200,
+              },
+            ],
+          },
+        },
+      ],
     },
   },
 });
