@@ -35,23 +35,12 @@ module.exports = ({ env }) => ({
         {
           uid: "api::new.new",
           modelName: "news",
-          queryConstraints: {
-            where: {
-              $and: [
-                {
-                  publishedAt: { $notNull: true },
-                },
-              ],
-            },
-          },
           fuzzysortOptions: {
-            characterLimit: 500,
             threshold: -600,
             limit: 5,
             keys: [
               {
                 name: "title",
-                weight: 100,
               },
             ],
           },
@@ -59,23 +48,12 @@ module.exports = ({ env }) => ({
         {
           uid: "api::service.service",
           modelName: "services",
-          queryConstraints: {
-            where: {
-              $and: [
-                {
-                  publishedAt: { $notNull: true },
-                },
-              ],
-            },
-          },
           fuzzysortOptions: {
-            characterLimit: 500,
             threshold: -600,
             limit: 5,
             keys: [
               {
                 name: "title",
-                weight: 200,
               },
             ],
           },

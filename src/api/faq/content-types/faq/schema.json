@@ -23,9 +23,9 @@
     },
     "service": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::service.service",
-      "inversedBy": "faq"
+      "inversedBy": "faqs"
     }
   }
 }

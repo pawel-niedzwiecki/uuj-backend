@@ -45,11 +45,11 @@
       "type": "richtext",
       "required": true
     },
-    "rating": {
+    "ratings": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::rating.rating",
-      "inversedBy": "service"
+      "mappedBy": "service"
     },
     "why_we": {
       "type": "richtext",
@@ -65,9 +65,9 @@
       "component": "blog.history-line",
       "required": true
     },
-    "faq": {
+    "faqs": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::faq.faq",
       "mappedBy": "service"
     }
