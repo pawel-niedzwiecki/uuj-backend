@@ -4,7 +4,8 @@
   "info": {
     "singularName": "e-mail",
     "pluralName": "e-mails",
-    "displayName": "e-mail"
+    "displayName": "E-mail",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
