@@ -24,7 +24,7 @@
     },
     "social_media": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "blog.social-media",
       "required": true
     }

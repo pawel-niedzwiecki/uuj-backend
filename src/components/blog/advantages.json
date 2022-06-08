@@ -2,14 +2,21 @@
   "collectionName": "components_blog_advantages",
   "info": {
     "displayName": "Advantages",
-    "icon": "align-justify"
+    "icon": "align-justify",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "icon": {
       "type": "enumeration",
       "enum": [
-        "clook"
+        "clock",
+        "gas",
+        "key",
+        "medal",
+        "tireflat",
+        "truck",
+        "wheelchair"
       ],
       "required": true
     },

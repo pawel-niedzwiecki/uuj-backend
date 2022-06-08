@@ -4,10 +4,11 @@
   "info": {
     "singularName": "home",
     "pluralName": "homes",
-    "displayName": "Home"
+    "displayName": "Home",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -15,6 +16,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::service.service"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blog.metadata-seo",
+      "required": true
     }
   }
 }
