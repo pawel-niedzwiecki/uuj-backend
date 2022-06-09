@@ -22,6 +22,12 @@
       "repeatable": false,
       "component": "blog.metadata-seo",
       "required": true
+    },
+    "raitings": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "blog.ratings"
     }
   }
 }
