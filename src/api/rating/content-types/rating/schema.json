@@ -42,6 +42,10 @@
       "relation": "manyToOne",
       "target": "api::service.service",
       "inversedBy": "ratings"
+    },
+    "from": {
+      "type": "string",
+      "required": true
     }
   }
 }
