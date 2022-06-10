@@ -34,6 +34,12 @@
     "content": {
       "type": "richtext",
       "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "news"
     }
   }
 }

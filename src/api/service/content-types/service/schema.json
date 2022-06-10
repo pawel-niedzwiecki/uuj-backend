@@ -70,6 +70,12 @@
       "relation": "oneToMany",
       "target": "api::faq.faq",
       "mappedBy": "service"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "services"
     }
   }
 }
