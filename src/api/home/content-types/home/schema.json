@@ -28,6 +28,11 @@
       "repeatable": false,
       "required": true,
       "component": "blog.ratings"
+    },
+    "faqs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq.faq"
     }
   }
 }
