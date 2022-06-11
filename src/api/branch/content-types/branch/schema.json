@@ -39,11 +39,6 @@
     "regon": {
       "type": "string"
     },
-    "main_adress": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
     "services": {
       "type": "relation",
       "relation": "oneToMany",
@@ -61,6 +56,16 @@
       "relation": "manyToOne",
       "target": "api::e-mail.e-mail",
       "inversedBy": "branches"
+    },
+    "lat": {
+      "type": "float",
+      "required": true,
+      "unique": true
+    },
+    "lng": {
+      "type": "float",
+      "required": true,
+      "unique": true
     }
   }
 }

@@ -27,6 +27,16 @@
       "repeatable": true,
       "component": "blog.social-media",
       "required": true
+    },
+    "main_address": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::branch.branch"
+    },
+    "branches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::branch.branch"
     }
   }
 }
