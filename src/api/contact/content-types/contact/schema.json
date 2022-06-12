@@ -37,6 +37,17 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::branch.branch"
+    },
+    "faqs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq.faq"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.metadata-seo",
+      "required": true
     }
   }
 }
