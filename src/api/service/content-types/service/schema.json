@@ -45,12 +45,6 @@
       "type": "richtext",
       "required": true
     },
-    "ratings": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::rating.rating",
-      "mappedBy": "service"
-    },
     "why_we": {
       "type": "richtext",
       "required": true
@@ -76,6 +70,12 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "services"
+    },
+    "ratings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blog.ratings",
+      "required": true
     }
   }
 }
