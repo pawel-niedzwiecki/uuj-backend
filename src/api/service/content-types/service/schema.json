@@ -53,12 +53,6 @@
       "type": "richtext",
       "required": true
     },
-    "history": {
-      "type": "component",
-      "repeatable": true,
-      "component": "blog.history-line",
-      "required": true
-    },
     "faqs": {
       "type": "relation",
       "relation": "oneToMany",
@@ -86,11 +80,12 @@
       ]
     },
     "what_we_can_for_you_made_cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
