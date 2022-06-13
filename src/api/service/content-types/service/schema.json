@@ -76,6 +76,21 @@
       "repeatable": false,
       "component": "blog.ratings",
       "required": true
+    },
+    "why_we_cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "what_we_can_for_you_made_cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
