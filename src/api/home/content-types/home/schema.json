@@ -23,7 +23,7 @@
       "component": "blog.metadata-seo",
       "required": true
     },
-    "raitings": {
+    "ratings": {
       "type": "component",
       "repeatable": false,
       "required": true,
