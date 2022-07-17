@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "number_phones",
+  "info": {
+    "singularName": "number-phone",
+    "pluralName": "number-phones",
+    "displayName": "Number phone"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number_phone": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "branches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::branch.branch",
+      "mappedBy": "number_phone"
+    }
+  }
+}

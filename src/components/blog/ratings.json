@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blog_ratings",
+  "info": {
+    "displayName": "ratings",
+    "icon": "arrow-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "ratings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rating.rating"
+    }
+  }
+}

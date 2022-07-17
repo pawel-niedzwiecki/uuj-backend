@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_blog_advantages",
+  "info": {
+    "displayName": "Advantages",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "clock",
+        "gas",
+        "key",
+        "medal",
+        "tireflat",
+        "truck",
+        "wheelchair"
+      ],
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 140
+    }
+  }
+}

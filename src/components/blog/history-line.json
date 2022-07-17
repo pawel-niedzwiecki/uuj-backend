@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_blog_history_lines",
+  "info": {
+    "displayName": "history line",
+    "icon": "calendar-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "content": {
+      "type": "text",
+      "required": true,
+      "unique": false
+    }
+  }
+}

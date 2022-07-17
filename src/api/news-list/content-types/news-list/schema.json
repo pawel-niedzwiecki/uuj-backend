@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "news_lists",
+  "info": {
+    "singularName": "news-list",
+    "pluralName": "news-lists",
+    "displayName": "newsList",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description_page": {
+      "type": "richtext",
+      "required": true
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blog.metadata-seo",
+      "required": true
+    }
+  }
+}

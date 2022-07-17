@@ -1,12 +1,19 @@
 module.exports = ({ env }) => ({
   upload: {
-    provider: "aws-s3",
-    providerOptions: {
-      accessKeyId: env("AWS_ACCESS_KEY_ID"),
-      secretAccessKey: env("AWS_ACCESS_SECRET"),
-      region: env("AWS_REGION"),
-      params: {
-        Bucket: env("AWS_BUCKET"),
+    config: {
+      provider: "aws-s3",
+      providerOptions: {
+        accessKeyId: env("AWS_ACCESS_KEY_ID"),
+        secretAccessKey: env("AWS_ACCESS_SECRET"),
+        region: env("AWS_REGION"),
+        params: {
+          Bucket: env("AWS_BUCKET"),
+        },
+      },
+      actionOptions: {
+        upload: {},
+        uploadStream: {},
+        delete: {},
       },
     },
   },
@@ -23,17 +30,43 @@ module.exports = ({ env }) => ({
       },
     },
   },
+
   menus: {
     config: {
       maxDepth: 0,
     },
   },
-  "vercel-deploy": {
+  "fuzzy-search": {
     enabled: true,
     config: {
-      deployHook: env("VERCEL_DEPLOY_HOOK"),
-      apiToken: env("VERCEL_API_TOKEN"),
-      appFilter: env("VERCEL_APP_NAME"),
+      contentTypes: [
+        {
+          uid: "api::new.new",
+          modelName: "news",
+          fuzzysortOptions: {
+            threshold: -600,
+            limit: 5,
+            keys: [
+              {
+                name: "title",
+              },
+            ],
+          },
+        },
+        {
+          uid: "api::service.service",
+          modelName: "services",
+          fuzzysortOptions: {
+            threshold: -600,
+            limit: 5,
+            keys: [
+              {
+                name: "title",
+              },
+            ],
+          },
+        },
+      ],
     },
   },
 });
